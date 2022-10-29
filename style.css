@@ -132,13 +132,15 @@ section .title::after {
 }
 
 .scroll-up-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   height: 45px;
   width: 42px;
   background: crimson;
   right: 30px;
   bottom: 10px;
-  text-align: center;
   line-height: 45px;
   color: #fff;
   z-index: 9999;
@@ -151,9 +153,17 @@ section .title::after {
 }
 
 .scroll-up-btn.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 30px;
   opacity: 1;
   pointer-events: auto;
+}
+#up{
+
+  width: 80%;
+  height: 80%;
 }
 
 .home {
