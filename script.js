@@ -29,14 +29,6 @@ $(document).ready(function () {
     loop: true
   });
 
-  let typed2 = new Typed(".typing-2", {
-    strings: ["Java Backend Developer", "Passionate learner",
-      "Junior in IT World"],
-    typeSpeed: 80,
-    backSpeed: 45,
-    loop: true
-  });
-
   $('.carousel').owlCarousel({
     margin: 20,
     loop: true,

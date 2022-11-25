@@ -205,6 +205,10 @@ section .title::after {
   font-weight: 500;
 }
 
+.about-me {
+  color: crimson;
+}
+
 .home .home-content a {
   display: inline-block;
   background: crimson;
