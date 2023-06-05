@@ -58,3 +58,43 @@ $(document).ready(function () {
     }
   });
 })
+
+var loader = document.getElementById("preloader")
+window.addEventListener("load", function (){
+  loader.style.display = "none";
+})
+
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll('.reveal');
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx2R7c0vybd1EJ8cE9C3QDzBz9nPsRMvfeDcZx69OiODEa1dbI5DTGsdglk2J2WCtwM/exec'
+const form = document.forms['submit-to-person']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully!"
+        setTimeout(function () {
+          msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+})

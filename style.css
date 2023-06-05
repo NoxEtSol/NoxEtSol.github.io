@@ -640,6 +640,39 @@ section .title::after {
   display: block;
 }
 
+.reveal{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+
+
+#preloader{
+  background: #000 url("assets/preloader.gif") no-repeat center;
+  background-size:20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0;
