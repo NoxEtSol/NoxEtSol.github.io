@@ -23,7 +23,7 @@ $(document).ready(function () {
 
   let typed = new Typed(".typing", {
     strings: ["Java Backend Developer", "Passionate learner",
-      "Junior in IT World"],
+      "Tech Explorer"],
     typeSpeed: 80,
     backSpeed: 45,
     loop: true
