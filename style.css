@@ -409,11 +409,19 @@ section .title::after {
   width: 65%;
 }
 
+.skills-content .right .quarkus::before {
+  width: 65%;
+}
+
 .skills-content .right .rest::before {
   width: 70%;
 }
 
 .skills-content .right .mysql::before {
+  width: 55%;
+}
+
+.skills-content .right .JDBC::before {
   width: 55%;
 }
 
